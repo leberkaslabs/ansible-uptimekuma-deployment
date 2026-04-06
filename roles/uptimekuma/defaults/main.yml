@@ -1,0 +1,16 @@
+---
+# Uptime Kuma Docker image to use
+# Set to the latest available version for up-to-date features
+uptimekuma_docker_image: louislam/uptime-kuma:2
+
+# Directory path for Uptime Kuma deployment
+# Location where Docker Compose files and configs are stored
+uptimekuma_docker_path: /opt/uptime-kuma
+
+# Owner of Uptime Kuma Docker files and directories
+# Usually set to the root user for full control
+uptimekuma_docker_owner: root
+
+# Group associated with Uptime Kuma Docker files
+# Typically the root group for permissions management
+uptimekuma_docker_group: root

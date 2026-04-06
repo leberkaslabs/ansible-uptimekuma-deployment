@@ -1,0 +1,17 @@
+{{ ansible_managed | ansible.builtin.comment }}
+---
+services:
+  uptime-kuma:
+    image: {{ uptimekuma_docker_image }}
+    container_name: uptime-kuma
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "100m"
+        max-file: "10"
+    ports:
+      - 127.0.0.1:3001:3001
+    volumes:
+      - {{ uptimekuma_docker_path }}/data:/app/data:rw
+      - /etc/localtime:/etc/localtime:ro

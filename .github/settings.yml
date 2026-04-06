@@ -1,0 +1,5 @@
+---
+# https://github.com/apps/settings
+repository:
+  description: Automated Ansible playbooks for deploying and managing containerized Uptime Kuma.
+  topics: ansible, uptime-kuma, container, docker

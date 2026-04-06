@@ -1,0 +1,23 @@
+---
+all:
+  hosts:
+    uptimekuma.example.com:
+      ansible_become: true
+
+  vars:
+    # Uptime Kuma Docker image to use
+    # Set to the latest available version for up-to-date features
+    uptimekuma_docker_image: louislam/uptime-kuma:2
+
+    # TLS Certificates for NGINX
+    # These will be placed inside the container under /etc/nginx/ssl.
+    nginx_docker_certs: []
+      # TLS certificate loaded from the inventory directory
+      # Required for enabling HTTPS on the Nginx container
+      # - name: tls.crt
+      #   content: "{{ lookup('ansible.builtin.file', inventory_dir ~ '/tls.crt') }}"
+
+      # TLS certificate loaded from the inventory directory
+      # Required for enabling HTTPS on the Nginx container
+      # - name: tls.key
+      #   content: "{{ lookup('ansible.builtin.file', inventory_dir ~ '/tls.key') }}"
